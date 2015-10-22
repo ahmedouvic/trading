@@ -8,10 +8,6 @@ tmp/*
 heroku.cfg
 build/
 settings/ssh/*
-fabfile/conf/conf.ini
-fabfile/global_conf.py
-.elasticbeanstalk/
-test_data.json
 ghostdriver.log
 tmp/
 celerybeat-schedule
