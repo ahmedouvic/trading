@@ -1,0 +1,9 @@
+Hello,
+
+{{ sender|capfirst }} sent you an email.
+
+Email: {{ email }}
+Phone: {{ phone }}
+
+Message:
+{{ message }}

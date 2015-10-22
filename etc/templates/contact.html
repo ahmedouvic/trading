@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{%block title %} - Contact us {%endblock%}
+
+{% block content %}
+<h2>Contact us</h2>
+<hr/>
+<div class="row">
+    {% for message in messages %}
+    <div class="alert alert-info" style="margin-top: 10px">{{ message }}</div>
+    {% endfor%}
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        {{ form.non_field_errors }}
+        {% for field in form %}
+        {{ field.errors }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="col-md-8 col-md-offset-2">
+        <form method="POST" action="." role="form" class="form-horizontal">
+            {% csrf_token %}
+            <div class="form-group" style="width: 400px;">
+                {{form.name}}
+            </div>
+
+            <div class="form-group" style="width: 400px;">
+                {{form.phone}}
+            </div>
+
+            <div class="form-group" style="width: 400px;">
+                {{form.email}}
+            </div>
+
+            <div class="form-group" style="width: 400px;">
+                {{form.subject}}
+            </div>
+
+            <div class="form-group" style="width: 725px;">
+                {{form.message}}
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
+            </div>
+{% endblock %}

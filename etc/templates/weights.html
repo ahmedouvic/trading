@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+      <div class="jumbotron text-center">
+          <table class="table table-striped">
+              <thead>
+              <tr>
+                  <td>Symbol</td>
+                  <td>Weight</td>
+              </tr>
+              </thead>
+              <tbody>
+              {% for key, value in weights.items %}
+                  <tr>
+                      <td>{{ key }}</td>
+                      <td>{{ value }}</td>
+                  </tr>
+              {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+
+
+
+{% endblock %}
