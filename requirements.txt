@@ -3,6 +3,7 @@ Django==1.8.5
 django-suit==0.2.15
 numpy==1.10.1
 pandas==0.17.0
-sympy==0.7.6.1
+scipy==0.16.0
 zipline==0.7.0
 gunicorn==19.3.0
+django-extensions==1.5.7
