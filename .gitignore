@@ -1,57 +1,28 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-env/
+*.pyc
+.idea/*
+local_env.py
+local_env.py~
+public_media/*
+.DS_Store
+tmp/*
+heroku.cfg
 build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
+settings/ssh/*
+fabfile/conf/conf.ini
+fabfile/global_conf.py
+.elasticbeanstalk/
+test_data.json
+ghostdriver.log
+tmp/
+celerybeat-schedule
+celeryev.pid
+celerybeat-schedule.db
+.vagrant/
+supervisord.log
+supervisord.pid
+node_modules/*
+*.pid
+xapian_index
+docker_data/*
+credentials.json
+ui/*
