@@ -19,7 +19,7 @@
     </div>
     {% endif %}
     <div class="col-md-8 col-md-offset-2">
-        <form method="POST" action="." role="form" class="form-horizontal">
+        <form method="POST" action="{% url 'contact' %}" role="form" class="form-horizontal">
             {% csrf_token %}
             <div class="form-group" style="width: 400px;">
                 {{form.name}}

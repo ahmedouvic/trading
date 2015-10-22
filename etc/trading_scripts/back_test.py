@@ -47,6 +47,7 @@ for s in symbols:
     prices_out = prices_list[s]
     prices.append(prices_out)
 
+
 def get_weights():
     weights, price = assets_meanvar1(symbols, prices)
     return weights
