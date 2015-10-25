@@ -71,6 +71,7 @@ INSTALLED_APPS = (
     'suit',
     'constance',
     'django_extensions',
+    'redis_cache', # redis as cache backend
     # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -176,6 +177,16 @@ SUIT_CONFIG = {
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 TO_EMAIL = 'ah.elhamidi@gmail.com'
+
+CACHES = {
+    "default": {
+        "BACKEND": "redis_cache.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "redis_cache.client.DefaultClient",
+        }
+    }
+}
 
 try:
     from local_env import *

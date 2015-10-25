@@ -32,7 +32,6 @@ def initialize(context):
 
 
 def handle_data(context, data):
-
     context.day_count += 1
     if context.day_count < 100:
         return
@@ -40,14 +39,14 @@ def handle_data(context, data):
     prices = history(950, '1d', 'price').dropna()
 
     security_index = 0;
-    daily_returns = np.zeros((len(context.stocks),950))
+    daily_returns = np.zeros((len(context.stocks), 950))
     for security in context.stocks:
-      if data.has_key(security):
-          for day in range(0,99):
-              day_of = prices[security][day]
-              day_before = prices[security][day-1]
-              daily_returns[security_index][day] = (day_of-day_before)/day_before
-          security_index = security_index + 1
+        if data.has_key(security):
+            for day in range(0, 99):
+                day_of = prices[security][day]
+                day_before = prices[security][day - 1]
+                daily_returns[security_index][day] = (day_of - day_before) / day_before
+            security_index = security_index + 1
     covars = cov(daily_returns)
 
     covars = covars * 250

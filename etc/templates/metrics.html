@@ -1,17 +1,22 @@
 {% extends 'base.html' %}
+{% block js %}
 
+
+{% endblock %}
 
 {% block content %}
       <div class="jumbotron text-center">
+          <h2>Risk metrics.</h2>
+        <p>
           <table class="table table-striped">
               <thead style="font-weight: bold;">
               <tr>
-                  <td>Symbol</td>
-                  <td>Weight</td>
+                  <td>Index</td>
+                  <td>Value</td>
               </tr>
               </thead>
               <tbody>
-              {% for key, value in weights.items %}
+              {% for key, value in risk_metrics.items %}
                   <tr>
                       <td>{{ key }}</td>
                       <td>{{ value }}</td>
@@ -19,6 +24,7 @@
               {% endfor %}
               </tbody>
           </table>
+        </p>
       </div>
 
 

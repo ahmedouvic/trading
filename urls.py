@@ -16,11 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from extra.views import contact_us
-from trade.views import index, weights
+from trade.views import index, weights, metrics
 
 urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^weights', weights, name='weights'),
+    url(r'^metrics', metrics, name='metrics'),
     url(r'^contact$', contact_us, name='contact'),
     url(r'^admin/', include(admin.site.urls)),
 ]

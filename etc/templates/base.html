@@ -36,6 +36,11 @@
             <li class="mainMenu {% if request.get_full_path|match_url:"weights" %}active{% endif %}">
             <a href="{% url 'weights' %}"><i class="icon-home"></i> Weights</a>
             </li>
+
+            <li class="mainMenu {% if request.get_full_path|match_url:"metrics" %}active{% endif %}">
+            <a href="{% url 'metrics' %}"><i class="icon-home"></i> Metrics</a>
+            </li>
+
             <li class="mainMenu {% if request.get_full_path|match_url:"contact" %}active{% endif %}"">
                 <a href="{% url 'contact' %}">Contact</a>
             </li>

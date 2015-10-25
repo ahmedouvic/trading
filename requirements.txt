@@ -2,7 +2,7 @@ Django==1.8.5
 -e git+https://github.com/obytes/django-constance.git@e1b6d7b405c26ba66dda9cff19d7a9b1f6e79fc9#egg=django_constance-master
 django-suit==0.2.15
 numpy==1.10.1
-pandas==0.17.0
+pandas==0.15.2
 scipy==0.16.0
 zipline==0.7.0
 gunicorn==19.3.0
